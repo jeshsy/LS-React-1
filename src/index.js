@@ -1,7 +1,15 @@
 /*eslint no-unused-vars: "off"*/
 import React from 'react';
-import ReactDom from 'react-dom';
+import { render } from 'react-dom';
+import ToDoForm from './components/ToDoForm';
 
 require('!style-loader!css-loader!sass-loader!./index.scss');
 
-ReactDom.render(<div>Hello World!</div>, document.getElementById('root'));
+const App = () => {
+  return (
+    <ToDoForm />)
+}
+
+render(<App />, document.getElementById('root'));
+
+// render(<div> Hello from React </div>, document.getElementById('root'));
